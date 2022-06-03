@@ -1,6 +1,5 @@
 from django.shortcuts import render
 
-from .models import PredictOne
 from .forms import UploadForm
 #from django.utils.timezone import datetime
 import os
