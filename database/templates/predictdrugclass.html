@@ -1,0 +1,28 @@
+{% extends 'main.html' %}
+
+{% block title %}PREDICT DRUG CLASS | Neo-Bhesard{% endblock %}
+
+{% block body %}
+    <div style="text-align:center">
+        <h1>PREDICT DRUG CLASS</h1><p></p>
+    </div>
+    <form method="post" enctype="multipart/form-data" style="text-align:center">
+        Choose your drug image | 
+        {% csrf_token %}
+		{{ form.as_p }}
+        <button>Upload</button><p></p>
+        <input type="button" onclick="window.location.href='PredictDrugClass/'" value="Go to Predict Drug Class">
+        <br>
+    </form>
+
+    {% if form.is_valid and file != None %}
+    <hr>
+    <div style="text-align:center">
+    <h5>The most probability of this drug is...</h5><p>
+    <h2><b>" NUOSIC GREEN{{ PredictDrugClass }} "</b></h2><br>
+    <img src="/media/upload/{{ file.name }}" style="max-width: 854px; max-height: 480px; text-align:center;">
+    <br><br>
+    </div>
+
+    {% endif %}
+{% endblock %}
