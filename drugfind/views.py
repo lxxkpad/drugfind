@@ -1,13 +1,12 @@
 from django.shortcuts import render
+
+from .models import PredictOne
 from .forms import UploadForm
 #from django.utils.timezone import datetime
 import os
 import random
 import numpy as np
-import cv2
-from keras.models import load_model
-
-# Create your views here.
+import cv as cv2
 
 def index(request):
     if request.method == 'POST':
@@ -59,7 +58,8 @@ def upload(request):
             if os.path.exists(f'{dir}{filename}'):
                 sp = filename.split('.', 1)
                 name = sp[0]
-                ext = sp[0]
+                ext = sp[1]
+                r = random.randint(1000, 10000)
                 return f'{name}.{ext}'
             else:
                 return filename
@@ -74,5 +74,5 @@ def upload(request):
     else:
         form = UploadForm()
         file = None
-
+    
     return render(request, 'predictdrugclass.html', {'form':form, 'file':file})
