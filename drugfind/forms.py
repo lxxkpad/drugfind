@@ -4,5 +4,5 @@ from django import forms
 class UploadForm(forms.Form):
     file = forms.FileField(required=True)
 
-class UPloadImageForm(forms.Form):
+class UploadImageForm(forms.Form):
     file = forms.ImageField(label='Image')
