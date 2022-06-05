@@ -1,1 +1,1 @@
-web: gunicorn database.wsgi --log-file -
+web: gunicorn drugfind.wsgi --log-file -
