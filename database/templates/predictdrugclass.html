@@ -7,9 +7,9 @@
         <h1>PREDICT DRUG CLASS</h1><p></p>
     </div>
     <form method="post" enctype="multipart/form-data" style="text-align:center">
-        Choose your drug image | 
-        {% csrf_token %}
-		{{ form.as_p }}
+        Choose your drug image
+		{% csrf_token %}
+        {{ form.as_p }}
         <button>Upload</button><p></p>
         <input type="button" onclick="window.location.href='PredictDrugClass/'" value="Go to Predict Drug Class">
         <br>
