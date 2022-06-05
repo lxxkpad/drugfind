@@ -28,10 +28,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     '*',
-    'http://drug-go.herokuapp.com/',
-    'https://drug-go.herokuapp.com/',
-    'drug-go.herokuapp.com.com',
-    'drug-go.herokuapp.com.com/',
+    'http://drug-find.herokuapp.com/',
+    'https://drug-find.herokuapp.com/',
+    'drug-find.herokuapp.com.com',
+    'drug-find.herokuapp.com.com/',
     '127.0.0.1',
 ]
 
