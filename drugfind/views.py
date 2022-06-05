@@ -5,7 +5,6 @@ from .forms import UploadForm
 import os
 import random
 import numpy as np
-import cv as cv2
 
 def index(request):
     if request.method == 'POST':

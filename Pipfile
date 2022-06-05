@@ -6,6 +6,8 @@ name = "pypi"
 [packages]
 django = "*"
 opencv-python = "*"
+pillow = "*"
+typing-extensions = "*"
 
 [dev-packages]
 
